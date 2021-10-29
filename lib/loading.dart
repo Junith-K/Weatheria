@@ -11,8 +11,39 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
+
+  void getDetails() async{
+    Weather instance =Weather(location: "Washington", weather: "", aqi: "", temp: "", code: "", dayornight: "");
+    await instance.getData();
+    Navigator.pushReplacementNamed(context, "/home", arguments: {
+      "location": instance.location,
+      "weather": instance.weather,
+      "aqi": instance.aqi,
+      "temp": instance.temp,
+      "code": instance.code,
+      "dayornight": instance.dayornight,
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getDetails();
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.orangeAccent,
+      body: Center(
+        child: SpinKitCubeGrid(
+          color: Colors.white,
+          size: 50.0,
+        ),
+      ),
+
+    );;
   }
 }

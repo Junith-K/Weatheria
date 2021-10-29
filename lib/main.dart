@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
 import 'chooselocation.dart';
-
+import 'loading.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: 'home',
+    initialRoute: '/loading',
     routes: {
-      '/home':(context)=>Home(),
+      '/loading': (context)=>Loading(),
+      '/home': (context)=>Home(),
       '/choose': (context)=>ChooseLocation(),
     },
   ));

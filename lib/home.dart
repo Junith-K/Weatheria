@@ -11,21 +11,43 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-  Weather weather = Weather(location: "", weather: "", aqi: "", temp: "", type: "");
-  //you can access the location by using weather.location
+
+  Map data = {};
 
 
   @override
   Widget build(BuildContext context) {
+
+    data = data.isNotEmpty? data: ModalRoute.of(context)!.settings.arguments as Map;
+
+
     return Scaffold(
       body: Column(
         children: <Widget>[
+          Container(
+            child: Text(data["location"]),
+          ),
+          Container(
+            child: Text(data["weather"]),
+          ),
           IconButton(onPressed: () async{
             dynamic result =await Navigator.pushNamed(context, '/choose');
+            setState(() {
+                data ={
+                  "location": result["location"],
+                  "weather": result["weather"],
+                  "aqi": result["aqi"],
+                  "temp": result["temp"],
+                  "code": result["code"],
+                  "dayornight": result["dayornight"],
+                };
+            });
           },
-            icon: Icon(Icons.location_on),)
+
+          icon: Icon(Icons.location_on),)
         ],
       ),
+
     );
   }
 }
