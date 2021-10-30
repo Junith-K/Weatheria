@@ -30,16 +30,34 @@ class _HomeState extends State<Home> {
           Container(
             child: Text(data["weather"]),
           ),
+          Container(
+            child: Text(data["pm25"].toString()),
+          ),
+          Container(
+            child: Text(data["pm10"].toString()),
+          ),
+          Container(
+            child: Text(data["co"].toString()),
+          ),
+          Container(
+            child: Text(data["temp"].toString()),
+          ),
+          Container(
+            child: Text(data["time"].toString()),
+          ),
           IconButton(onPressed: () async{
             dynamic result =await Navigator.pushNamed(context, '/choose');
             setState(() {
                 data ={
                   "location": result["location"],
                   "weather": result["weather"],
-                  "aqi": result["aqi"],
+                  "pm25": result["pm25"],
+                  "pm10": result["pm10"],
+                  "co": result["co"],
                   "temp": result["temp"],
                   "code": result["code"],
                   "dayornight": result["dayornight"],
+                  "time": result["time"],
                 };
             });
           },
