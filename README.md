@@ -36,3 +36,7 @@ To clone the repository search for `Git Clone` and click on it. Then, paste the 
 
 5. In the terminal, type the following command to run the app
 ```flutter run```
+
+# **for Android Studio**
+
+https://www.geeksforgeeks.org/android-studio-setup-for-flutter-development/
