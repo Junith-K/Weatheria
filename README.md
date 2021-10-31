@@ -23,7 +23,7 @@
 
 To clone the repository search for `Git Clone` and click on it. Then, paste the given link in the box and click on `Clone or download` button.
 
-```https://github.com/Junith-K/weather.git```
+```https://github.com/Junith-K/Weatheria.git```
 
 2. Make sure you have flutter installed in your VScode. If you don't, follow the steps given in the link below.
 ```https://www.youtube.com/watch?v=5izFFbdHnWY```
