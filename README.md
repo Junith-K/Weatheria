@@ -16,6 +16,10 @@
 - Gives Mask and precaution recommendation based on pollution data
 
  Air polution is rising at an alarming rate and everyone deserves to be informed about the precautions to be taken. A myriad of diseases can be traced back to air pollution and most of those diseases are preventable by wearing pollution masks and staying at home when pollution levels become too high.
+ 
+ 
+ **Reccomended to run on Android Studio**
+ 
 
 # **Installation Guidelines**
 
