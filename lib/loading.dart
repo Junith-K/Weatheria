@@ -20,7 +20,7 @@ class _LoadingState extends State<Loading> {
     loc = dat["city"];
 
 
-    Weather instance =Weather(location: loc, weather: "", pm25: 0, pm10: 0, co: 0, temp: 0, code: "", dayornight: 0, time: "");
+    Weather instance =Weather(location: loc, weather: "", pm25: 0, pm10: 0, co: 0, temp: 0, code: "", dayornight: "", time: "");
     await instance.getData();
     Navigator.pushReplacementNamed(context, "/home", arguments: {
       "location": instance.location,
@@ -54,6 +54,6 @@ class _LoadingState extends State<Loading> {
         ),
       ),
 
-    );;
+    );
   }
 }

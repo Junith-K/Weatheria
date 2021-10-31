@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 
 class Weather{
@@ -10,7 +11,7 @@ class Weather{
   double co;
   double temp;
   String code;
-  int dayornight;
+  String dayornight;
   String time;
 
   Weather({required this.location,required this.weather, required this.pm25,required this.pm10, required this.co ,required this.temp,required this.code, required this.dayornight, required this.time});
@@ -32,12 +33,18 @@ class Weather{
       co.toInt();
       pm25.toInt();
       pm10.toInt();
-      dayornight = data["current"]["is_day"];
+      if(data["current"]["is_day"]==0) {
+        dayornight = "night";
+      }
+      else{
+        dayornight = "day2";
+      }
       print(time);
     }
     catch(e){
       print("Error Caught : $e");
       location = "Location NOT Found!";
+      weather = "NULL";
     }
   }
 }
