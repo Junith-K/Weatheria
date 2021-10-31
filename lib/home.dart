@@ -80,19 +80,19 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
-                  child: Text(data["weather"]+",  ", style: TextStyle(
+                  child: Text("${data["weather"]}"+",  ", style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w300,
-                    fontSize: 25,
+                    fontSize: 18,
                   ),),
                 ),
                 Container(
                   child: Text(data["time"].toString(),
-                  style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w300,
-                  ),),
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w300,
+                    ),),
                 ),
               ],
             ),
@@ -152,7 +152,7 @@ class _HomeState extends State<Home> {
             ),
             Container(
               color: Colors.white,
-              height: 188,
+              height: 194,
               child: Column(
                 children: [
                   Row(
@@ -162,11 +162,11 @@ class _HomeState extends State<Home> {
                       Container(
                         padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
                         child: Text("PM2.5 Levels ",
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.black,
-                          fontFamily: "Poppins",
-                        ),),
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontFamily: "Poppins",
+                          ),),
                       ),
                       Container(
                         padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
