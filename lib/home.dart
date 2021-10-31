@@ -107,13 +107,13 @@ class _HomeState extends State<Home> {
               ),),
             ),
             SizedBox(
-              height: 200,
+              height: 298,
             ),
             Column(
 
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.fromLTRB(230, 10, 0, 0),
+                  padding: EdgeInsets.fromLTRB(235, 10, 0, 0),
                   height: 50,
                   width: MediaQuery.of(context).size.width,
                   child: IconButton(onPressed: () async{
@@ -142,7 +142,7 @@ class _HomeState extends State<Home> {
                   height: 50,
                   width: MediaQuery.of(context).size.width,
                   child: Text("Choose Location ", style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 18,
                     color: Colors.white,
                     fontWeight: FontWeight.w500,
                   ),),
