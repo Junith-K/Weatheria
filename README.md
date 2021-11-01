@@ -21,7 +21,7 @@
 # **Reccomended to run on Android Studio on 6INCH Mobile Emulator**
 # ** Remember :
 **The app is designed to work on an 6 inch mobile so if an 6 inch or less mobile emulator is taken it will give error since the size is smaller than usual**
- 
+![picture](6inch.png)
 
 # **Installation Guidelines**
 
